@@ -1,0 +1,10 @@
+.green{
+    background-color: green;
+}
+.red{
+    background-color: red;
+}
+.item{
+    width:80%;
+    border-radius: 20px;
+}

@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+import {NewTitle}  from './NewTitle'
+export const App = () => {
+  
+  const product=[
+    {id:1,title:"chair",price:2000,toggle:false},
+    {id:2,title:"table",price:2000,toggle:false},
+    {id:3,title:"desk",price:2000,toggle:false},
+  ]
+ 
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",columnGap:"10px",margin:"0px 10px 0px 10px"}}>
+      {
+      product.map(p => <NewTitle title={p.title} price={p.price} toggle={p.toggle}
+      key={p.id}
+      />
+       
+        
+        
 
-export default App;
+      
+        
+        
+        )
+      }
+            
+    </div>
+  )
+}
